@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rally — VibeSense</title>
+    <style>
+      :root {
+        --accent: #4de3ff;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+        color: #eaf2ff;
+        overflow: hidden;
+      }
+      body {
+        background:
+          radial-gradient(1100px 700px at 50% 28%, #0b1226 0%, #05060f 62%, #020309 100%) fixed;
+      }
+      #wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 14px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        color: #8fa3c0;
+      }
+      h1 b {
+        color: var(--accent);
+        font-weight: 700;
+      }
+      canvas {
+        width: min(94vw, 800px);
+        height: auto;
+        border-radius: 12px;
+        border: 1px solid rgba(140, 170, 255, 0.14);
+        background: #04050d;
+        box-shadow:
+          0 0 0 1px rgba(0, 0, 0, 0.6),
+          0 24px 70px rgba(0, 0, 0, 0.55),
+          0 0 90px rgba(77, 227, 255, 0.08);
+      }
+      #status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 16px;
+        border-radius: 999px;
+        border: 1px solid rgba(140, 170, 255, 0.14);
+        background: rgba(10, 14, 30, 0.7);
+        font-size: 12px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #8fa3c0;
+      }
+      #status::before {
+        content: '';
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #f5b942;
+        box-shadow: 0 0 8px #f5b942;
+        flex: none;
+      }
+      #status.playing {
+        color: #d3f6ff;
+      }
+      #status.playing::before {
+        background: var(--accent);
+        box-shadow: 0 0 8px var(--accent);
+        animation: pulse 1.6s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        50% {
+          opacity: 0.35;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1><b>Rally</b> · VibeSense</h1>
+      <canvas id="game" width="800" height="600"></canvas>
+      <div id="status">connecting…</div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>

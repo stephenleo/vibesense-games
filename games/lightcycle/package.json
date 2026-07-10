@@ -1,0 +1,16 @@
+{
+  "name": "@vibesense/game-lightcycle",
+  "version": "1.0.0",
+  "description": "Lightcycle for VibeSense \u2014 light-trail survival arena; left stick turns, R2 boosts, auto-pauses when Claude needs you.",
+  "license": "Apache-2.0",
+  "author": "stephenleo",
+  "keywords": [
+    "vibesense",
+    "vibesense-game"
+  ],
+  "files": [
+    "vibesense-game.json",
+    "index.html",
+    "game.js"
+  ]
+}

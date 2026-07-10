@@ -1,0 +1,16 @@
+{
+  "name": "@vibesense/game-rally",
+  "version": "1.0.0",
+  "description": "Rally for VibeSense \u2014 Pong evolved: left stick moves your paddle, R2 smashes; auto-pauses when Claude needs you.",
+  "license": "Apache-2.0",
+  "author": "stephenleo",
+  "keywords": [
+    "vibesense",
+    "vibesense-game"
+  ],
+  "files": [
+    "vibesense-game.json",
+    "index.html",
+    "game.js"
+  ]
+}

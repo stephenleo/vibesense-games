@@ -1,0 +1,16 @@
+{
+  "name": "@vibesense/game-missile-command",
+  "version": "1.0.0",
+  "description": "Skyfall for VibeSense \u2014 left stick flies the crosshair, R2 fires interceptors to shield your cities; auto-pauses when Claude needs you.",
+  "license": "Apache-2.0",
+  "author": "stephenleo",
+  "keywords": [
+    "vibesense",
+    "vibesense-game"
+  ],
+  "files": [
+    "vibesense-game.json",
+    "index.html",
+    "game.js"
+  ]
+}

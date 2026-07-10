@@ -1,0 +1,9 @@
+{
+  "id": "lightcycle",
+  "name": "Lightcycle",
+  "version": "1.0.0",
+  "protocolVersion": 1,
+  "kind": "web",
+  "entry": "index.html",
+  "entitlement": "free"
+}

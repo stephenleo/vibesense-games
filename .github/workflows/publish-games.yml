@@ -1,0 +1,38 @@
+name: publish-games
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish-games:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Publish standalone game packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          set -euo pipefail
+          summary=""
+          for pkg in games/*/package.json; do
+            dir=$(dirname "$pkg")
+            name=$(node -p "require('./$pkg').name")
+            version=$(node -p "require('./$pkg').version")
+            private=$(node -p "require('./$pkg').private === true")
+            if [ "$private" = "true" ]; then
+              summary="${summary}\n– skipped ${name}@${version} (private)"
+              continue
+            fi
+            if npm view "${name}@${version}" version >/dev/null 2>&1; then
+              summary="${summary}\n– skipped ${name}@${version} (already published)"
+              continue
+            fi
+            echo "Publishing ${name}@${version} from ${dir}"
+            ( cd "$dir" && npm publish --access public )
+            summary="${summary}\n✓ published ${name}@${version}"
+          done
+          echo -e "\n=== Summary ===${summary}"
