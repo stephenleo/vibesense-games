@@ -24,6 +24,8 @@
   let moveInput = 0 // -1..1 from stick or keyboard
   let firing = false
   let lastShot = 0
+  const AUTOPILOT_IDLE_MS = 2500
+  let lastHumanInput = 0 // 0 → autopilot from the first frame until a human touches the controls
 
   const ship = { x: W / 2, y: H - 50, w: 40, h: 20, speed: 320 }
   let bullets = [] // {x, y}
@@ -120,6 +122,7 @@
     if (msg.type === 'state') {
       setPlaying(msg.state === 'playing')
     } else if (msg.type === 'input') {
+      lastHumanInput = performance.now()
       if (msg.kind === 'axis' && msg.axis === 'left_x') moveInput = msg.value
       if (msg.kind === 'button' && (msg.button === 'r2' || msg.button === 'l2')) {
         firing = msg.pressed
@@ -135,6 +138,7 @@
   const keys = {}
   addEventListener('keydown', (e) => {
     keys[e.key] = true
+    lastHumanInput = performance.now()
     if (e.key === ' ' && gameOver) reset()
   })
   addEventListener('keyup', (e) => (keys[e.key] = false))
@@ -173,13 +177,47 @@
       p.life -= dt
     }
     particles = particles.filter((p) => p.life > 0)
-    if (gameOver) return
+
+    // Autopilot: untouched controls hand the ship to a demo pilot — dodge the
+    // nearest threatening bomb, otherwise shadow the lowest nearby alien and
+    // fire when lined up. Same idle convention as the built-in games.
+    const idle = performance.now() - lastHumanInput > AUTOPILOT_IDLE_MS
+    if (gameOver) {
+      if (idle && performance.now() - gameOverAt > 1800) reset()
+      return
+    }
+    let apMove = 0
+    let apFire = false
+    if (idle) {
+      const threat = bombs.find((b) => b.y > ship.y - 170 && Math.abs(b.x - ship.x) < 46)
+      let targetX = ship.x
+      if (threat) {
+        targetX = threat.x > ship.x ? threat.x - 90 : threat.x + 90
+      } else {
+        let best = null
+        let bestScore = Infinity
+        for (const a of aliens) {
+          if (!a.alive) continue
+          const s = Math.abs(a.x - ship.x) - a.y * 0.6 // near column, prefer low rows
+          if (s < bestScore) {
+            bestScore = s
+            best = a
+          }
+        }
+        if (best) {
+          targetX = best.x + alienDir * alienSpeed * 0.35 // lead the fleet drift
+          apFire = Math.abs(targetX - ship.x) < 14
+        }
+      }
+      apMove = Math.max(-1, Math.min(1, (targetX - ship.x) / 40))
+    }
 
     const kb = (keys.ArrowLeft ? -1 : 0) + (keys.ArrowRight ? 1 : 0)
-    const move = Math.abs(moveInput) > 0.15 ? moveInput : kb
+    const human = Math.abs(moveInput) > 0.15 ? moveInput : kb
+    const move = idle ? apMove : human
     ship.x = Math.max(ship.w / 2, Math.min(W - ship.w / 2, ship.x + move * ship.speed * dt))
 
-    const wantFire = firing || keys[' ']
+    const wantFire = idle ? apFire : firing || keys[' ']
     const now = performance.now()
     if (wantFire && now - lastShot > 280) {
       bullets.push({ x: ship.x, y: ship.y - 14 })
