@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-tunneler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tunneler for VibeSense \u2014 dig the strata, pump the creatures, drop boulders; auto-pauses when Claude needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",

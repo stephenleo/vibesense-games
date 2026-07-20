@@ -1,7 +1,7 @@
 {
   "id": "alien-defenders",
   "name": "Alien Defenders",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",

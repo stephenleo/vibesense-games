@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-merge",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Merge for VibeSense \u2014 flick the stick to slide 2048 tiles; auto-pauses when Claude needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",

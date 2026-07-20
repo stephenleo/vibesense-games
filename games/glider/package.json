@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-glider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Glider for VibeSense \u2014 one-button flow runner; thrust through the gates, auto-pauses when Claude needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",
