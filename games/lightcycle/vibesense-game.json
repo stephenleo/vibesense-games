@@ -5,5 +5,11 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Outlast three AI cycles — don't touch a light-wall",
+    "Flick the left stick or arrow keys to turn 90°",
+    "R2 or space boosts off a recharging meter",
+    "L2 or shift brakes"
+  ]
 }

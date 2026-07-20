@@ -5,5 +5,12 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Reveal every safe cell without hitting a mine",
+    "Left stick or arrow keys glide the cursor (hold to repeat)",
+    "R2 or space reveals the cell",
+    "L2 or shift toggles a flag",
+    "The first reveal is always safe"
+  ]
 }

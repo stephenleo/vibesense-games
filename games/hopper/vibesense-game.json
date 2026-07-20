@@ -5,5 +5,12 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Hop across the traffic and river into the home slots",
+    "Flick the left stick or tap arrows to hop one cell",
+    "R2 or space hops forward",
+    "L2 or shift hops back",
+    "Ride the logs — the water is deadly"
+  ]
 }

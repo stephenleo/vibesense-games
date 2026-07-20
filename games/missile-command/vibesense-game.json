@@ -5,5 +5,12 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Intercept the incoming warheads before they hit the cities",
+    "Left stick or arrow keys fly the crosshair",
+    "R2, L2 or space fires an interceptor at the crosshair",
+    "Blasts chain — detonate where warheads cluster",
+    "Fire restarts after game over"
+  ]
 }

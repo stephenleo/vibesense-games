@@ -5,5 +5,12 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Blast the descending swarm — the ship autofires",
+    "Left stick or arrow keys move the ship in the bottom zone",
+    "R2 or space boosts the fire rate",
+    "L2 or shift slows movement for precision",
+    "R2 or L2 restarts after game over"
+  ]
 }

@@ -5,5 +5,11 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Shoot down the alien swarm before it lands",
+    "Left stick or ←/→ moves the ship",
+    "R2 or space fires (hold for autofire)",
+    "Fire restarts after game over"
+  ]
 }

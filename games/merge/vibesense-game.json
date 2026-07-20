@@ -5,5 +5,11 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Slide tiles together to merge and double them",
+    "Flick the left stick or arrow keys to slide every tile",
+    "One flick is one move — return to center to re-arm",
+    "R2, L2 or space restarts after game over"
+  ]
 }
