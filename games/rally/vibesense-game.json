@@ -5,5 +5,12 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "First to 7 points takes the match",
+    "Left stick or ↑/↓ slides your paddle",
+    "R2 or space smashes the ball for a speed burst",
+    "L2 or shift lobs a defensive backspin",
+    "R2 or L2 restarts after the match"
+  ]
 }

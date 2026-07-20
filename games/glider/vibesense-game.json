@@ -5,5 +5,11 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Thread the glider through the gaps between pylons",
+    "R2, space or stick up pulses thrust",
+    "L2, shift or stick down dives",
+    "Any input restarts after a crash"
+  ]
 }

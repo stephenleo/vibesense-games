@@ -5,5 +5,12 @@
   "protocolVersion": 1,
   "kind": "web",
   "entry": "index.html",
-  "entitlement": "free"
+  "entitlement": "free",
+  "howToPlay": [
+    "Dig through the earth and clear out the creatures",
+    "Left stick or arrow keys dig in four directions",
+    "R2 or space fires the pump-harpoon (hold to inflate and pop)",
+    "L2 or shift sprints",
+    "Dig out a boulder's footing to crush what's below — including you"
+  ]
 }
