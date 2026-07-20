@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-sweeper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sweeper for VibeSense \u2014 neon minesweeper; left stick glides the cursor, R2 reveals, L2 flags; auto-pauses when Claude needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",

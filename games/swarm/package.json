@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-swarm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Swarm for VibeSense \u2014 a Centipede-style shooter; blast the swarm apart while Claude works, auto-pauses when it needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",

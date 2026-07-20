@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-hopper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hopper for VibeSense \u2014 flick the stick to hop across neon traffic and a drifting river; auto-pauses when Claude needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",

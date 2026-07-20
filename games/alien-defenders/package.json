@@ -1,6 +1,6 @@
 {
   "name": "@vibesense/game-alien-defenders",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Alien Defenders for VibeSense \u2014 left stick moves, R2 fires at the descending swarm; auto-pauses when Claude needs you.",
   "license": "Apache-2.0",
   "author": "stephenleo",
