@@ -1,5 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="8" fill="#05060f"/>
-  <rect x="1" y="1" width="30" height="30" rx="7" fill="none" stroke="#4dff88" stroke-opacity=".4"/>
-  <path d="m13 10.5 9 5.5-9 5.5z" fill="#4dff88"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title description">
+  <title id="title">VibeSense</title>
+  <desc id="description">An open game controller outline with a play symbol, D-pad, and four buttons.</desc>
+  <style>
+    .background { fill: #f6f8f5; }
+    .outline { fill: none; stroke: #07111f; stroke-linecap: round; stroke-linejoin: round; }
+    .controls { fill: #26be83; }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: #08120e; }
+      .outline { stroke: #f6f8f5; }
+    }
+  </style>
+  <rect class="background" width="1600" height="1000"/>
+  <g class="outline" stroke-width="52">
+    <path d="M700 110H430C305 110 245 169 210 290L82 614C46 708 83 799 171 838C264 880 353 846 407 758L459 675C486 633 526 620 592 620"/>
+    <path d="M900 110H1170C1295 110 1355 169 1390 290L1518 614C1554 708 1517 799 1429 838C1336 880 1247 846 1193 758L1141 675C1114 633 1074 620 1008 620"/>
+    <path d="M705 307 956 478 705 649Z"/>
+  </g>
+  <g class="controls">
+    <rect x="367" y="267" width="68" height="253" rx="34"/>
+    <rect x="276" y="358" width="250" height="68" rx="34"/>
+    <circle cx="1177" cy="307" r="41"/>
+    <circle cx="1089" cy="397" r="41"/>
+    <circle cx="1265" cy="397" r="41"/>
+    <circle cx="1177" cy="488" r="41"/>
+  </g>
 </svg>
