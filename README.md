@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="assets/vibesense-mark.svg" width="96" height="96" alt="VibeSense logo">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/vibesense-mark-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/vibesense-mark-light.svg">
+    <img src="assets/vibesense-mark-light.svg" width="96" height="96" alt="VibeSense logo">
+  </picture>
 </p>
 
 # VibeSense Games

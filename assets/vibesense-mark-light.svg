@@ -4,9 +4,6 @@
   <style>
     .outline { fill: none; stroke: #07111f; stroke-linecap: round; stroke-linejoin: round; }
     .controls { fill: #26be83; }
-    @media (prefers-color-scheme: dark) {
-      .outline { stroke: #f6f8f5; }
-    }
   </style>
   <g class="outline" stroke-width="52">
     <path d="M700 110H430C305 110 245 169 210 290L82 614C46 708 83 799 171 838C264 880 353 846 407 758L459 675C486 633 526 620 592 620"/>
