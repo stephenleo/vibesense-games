@@ -1,6 +1,12 @@
-# vibesense-games
+<p align="center">
+  <img src="assets/vibesense-mark.svg" width="96" height="96" alt="VibeSense logo">
+</p>
 
-The official installable games for [VibeSense](https://github.com/stephenleo/vibesense) — play retro games with your controller while Claude Code works.
+# VibeSense Games
+
+The official installable games for [VibeSense](https://github.com/stephenleo/vibesense) — play retro games with your controller while a supported coding agent works.
+
+VibeSense routes agent state and normalized controller events into games; [OpenMicro](https://github.com/stephenleo/open-micro) owns controller discovery, input, and hardware lifecycle.
 
 Each directory under `games/` is a standalone npm package (`@vibesense/game-<id>`) with no build step: a `package.json`, the [VibeSense manifest](https://github.com/stephenleo/vibesense/blob/main/docs/plugin-contract.md) (`vibesense-game.json`), an `index.html` entry page, and the game code.
 
